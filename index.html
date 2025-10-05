@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeForge X</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your existing CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Section Icons */
+    .section-icon {
+      font-size: 40px;
+      color: #00ff00; /* Match your CodeForge green */
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .materials-grid .section-icon {
+      margin-bottom: 10px;
+    }
+
+    /* Fix Contact section centering */
+    .contact .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px; /* spacing between h2, icon, p */
+    }
+  </style>
+</head>
+<body id="home">
+
+  <!-- Falling leaves -->
+  <canvas id="leafCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🍃ℂ𝕠𝕕𝕖𝕗𝕠𝕣𝕘𝕖 𝕏 🍃</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#study-materials">Experience & Class Note</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#education" onclick="toggleMenu()">Education</a>
+      <a href="#study-materials" onclick="toggleMenu()">Experience & Class Note</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-content">
+    <div class="profile-image">
+      <img src="1.jpeg" alt="my photo">
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-title">𝐻𝑒𝓁𝓁𝑜, 𝐼'𝓂 <span class="highlight">𝑅𝒶𝓃𝒶</span></h1>
+      <p class="hero-subtitle">
+        𝕋𝕙𝕚𝕤 𝕨𝕖𝕓𝕤𝕚𝕥𝕖 𝕚𝕤 𝕒 𝕡𝕝𝕒𝕔𝕖 𝕨𝕙𝕖𝕣𝕖 𝕀 𝕤𝕙𝕒𝕣𝕖 𝕒 𝕝𝕚𝕥𝕥𝕝𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕪𝕤𝕖𝕝𝕗, 𝕞𝕪 𝕤𝕥𝕦𝕕𝕪 𝕞𝕒𝕥𝕖𝕣𝕚𝕒𝕝𝕤, 𝕒𝕟𝕕 𝕥𝕙𝕖 𝕡𝕣𝕠𝕛𝕖𝕔𝕥𝕤 𝕀’𝕞 𝕨𝕠𝕣𝕜𝕚𝕟𝕘 𝕠𝕟.
+      </p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Learn More</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container-wrapper">
+
+    <!-- ABOUT -->
+    <h2 id="about">𝒜𝒷ℴ𝓊𝓉 ℳℯ</h2>
+    <i class="fas fa-user section-icon"></i>
+    <p class="section-subtitle">Get to know me better</p>
+    <div class="container about-container">
+      <p>Hello! I’m <strong>Rana Kachary</strong>,  a Bachelor student in Computer Science with a deep passion for technology. I am eager to explore this dynamic field, focusing on developing expertise in programming and web development.</p>
+      <p>As an aspiring web developer, I have hands-on experience with basics of networking, and programming languages like C/C++ and Java. I'm driven to apply and improve my skills through real-world challenges and am actively working towards industry certifications.</p>
+    </div>
+
+    <!-- HOBBIES & GOALS -->
+    <div class="container extra-about-container">
+      <i class="fas fa-heart section-icon"></i>
+      <h3>Hobbies & Interests</h3>
+      <p>I love coding, playing games, listening to classical music, painting, and exploring the latest in cybersecurity.</p>
+
+      <i class="fas fa-bullseye section-icon"></i>
+      <h3>Career Goals</h3>
+      <p>My goal is to become a full-stack developer, contribute to open-source projects, and eventually work in AI & Cybersecurity to solve real-world problems.</p>
+    </div>
+
+    <!-- EDUCATION -->
+    <h2 id="education">ℰ𝒹𝓊𝒸𝒶𝓉𝒾ℴ𝓃</h2>
+    <i class="fas fa-graduation-cap section-icon"></i>
+    <p class="section-subtitle">My professional journey and academic background</p>
+    <div class="container education-container">
+      <h3>Bachelor's in Computer Science</h3>
+      <p class="section-subtitle">Pandit Deendayal Upadhyaya Adarsha Mahavidyalay</p>
+      <p>Focusing on core computer science principles with a growing interest in cybersecurity applications. Coursework covers programming, algorithms, and network security. I’m also involved in cybersecurity clubs and competitions to sharpen my expertise.</p>
+    </div>
+
+    <!-- MATERIALS / PROJECTS -->
+    <h2 id="study-materials">𝔼𝕩𝕡𝕖𝕣𝕚𝕖𝕟𝕔𝕖 & ℂ𝕝𝕒𝕤𝕤 ℕ𝕠𝕥𝕖</h2>
+    <i class="fas fa-project-diagram section-icon"></i>
+    <p class="section-subtitle">Resources and materials for learning</p>
+    <div class="container education-container">
+      <div class="materials-grid">
+        <div class="material-item">
+          <h4>Web Development</h4>
+          <p>Guide covering HTML, CSS, JavaScript with AI features.</p>
+          <a href="https://www.w3schools.com/html/default.asp" target="_blank">View Material</a>
+        </div>
+        <div class="material-item">
+          <h4>C & C++</h4>
+          <p>Personal notes and examples from learning journey.</p>
+          <a href="https://www.w3schools.com/c/index.php" target="_blank">View Material</a>
+        </div>
+        <div class="material-item">
+          <h4>Data Structures</h4>
+          <p>Implementation examples and complexity analysis.</p>
+          <a href="https://drive.google.com/drive/folders/1Rt5eqndZ7lyV-1-vU4Id5EZ9T90QbuZ2?usp=sharing" target="_blank">View Material</a>
+        </div>
+        <div class="material-item">
+          <h4>Computer Science Notes</h4>
+          <p>All major & minor class notes, questions, and practical programs.</p>
+          <a href="https://drive.google.com/drive/folders/1Rt5eqndZ7lyV-1-vU4Id5EZ9T90QbuZ2?usp=sharing" class="material-link">View Material</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <i class="fas fa-envelope section-icon"></i>
+          <p class="section-subtitle">Let's connect and collaborate</p>
+        </div>
+        <div class="contact-content">
+          <!-- CONTACT FORM -->
+          <div class="contact-form-container animate-in">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+                <span class="error-message" id="subject-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error-message" id="message-error"></span>
+              </div>
+              <button type="submit" onclick="sendmail()" class="btn btn-primary submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none;">
+                  <i class="fas fa-spinner fa-spin"></i> Sending...
+                </span>
+              </button>
+              <div class="form-message" id="form-message"></div>
+            </form>
+          </div
+           <!-- SOCIAL LINKS -->
+          <div class="contact-info animate-in">
+            <h3>Connect with me</h3>
+            <div class="social-links">
+              <a href="https://github.com/ranrabha" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.facebook.com/?ref=homescreenpwa" class="social-link" target="_blank">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/hayat_eishikawa?igsh=MXR6ZXh0MHJ0eWdoMQ==" class="social-link" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="http://t.me/Infernowyrmlord" class="social-link" target="_blank">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- EXTRA CONTACT INFO -->
+          <div class="extra-contact-container">
+            <h3>Contact Info</h3>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Assam, INDIA</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 8822768001</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Available Mon-Sat, 9AM-6PM</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
